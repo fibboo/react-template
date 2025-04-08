@@ -56,7 +56,7 @@ Error generating stack: `+u.message+`
             duration-150\r
             active:scale-95\r
             active:shadow-inner\r
-          `,onClick:D,children:al})}function Q1(){const[D,al]=ge.useState(""),[$,r]=ge.useState(""),[X,V]=ge.useState(!0),sl=()=>{V(!0),fetch("https://api.quotable.io/quotes/random").then(P=>(console.log("Response status:",P.status),P.json())).then(P=>{var R,E;console.log("API Data:",P),P&&Array.isArray(P)&&((R=P[0])!=null&&R.content)&&((E=P[0])!=null&&E.author)?(al(P[0].content),r(P[0].author)):(al("No quote available"),r("Unknown Author")),V(!1)}).catch(P=>{console.error("Error fetching quote",P),al("Error loading quote..."),r(""),V(!1)})};return ge.useEffect(()=>{sl()},[]),k.jsxs("main",{className:"flex flex-col justify-center-safe items-center flex-1 p-6",children:[k.jsx("div",{className:`\r
+          `,onClick:D,children:al})}function Q1(){const[D,al]=ge.useState(""),[$,r]=ge.useState(""),[X,V]=ge.useState(!0),sl=()=>{V(!0),fetch("http://api.quotable.io/quotes/random").then(P=>(console.log("Response status:",P.status),P.json())).then(P=>{var R,E;console.log("API Data:",P),P&&Array.isArray(P)&&((R=P[0])!=null&&R.content)&&((E=P[0])!=null&&E.author)?(al(P[0].content),r(P[0].author)):(al("No quote available"),r("Unknown Author")),V(!1)}).catch(P=>{console.error("Error fetching quote",P),al("Error loading quote..."),r(""),V(!1)})};return ge.useEffect(()=>{sl()},[]),k.jsxs("main",{className:"flex flex-col justify-center-safe items-center flex-1 p-6",children:[k.jsx("div",{className:`\r
               max-w-xl\r
               bg-indigo-200 text-gray-900\r
               border-2 border-indigo-600 shadow-lg rounded-xl\r
