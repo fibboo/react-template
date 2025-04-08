@@ -1,5 +1,6 @@
 import {useEffect, useState} from 'react';
 import Button from "../components/Button.jsx";
+import {Books} from "../components/Books.jsx";
 
 const SOME_KEY = import.meta.env.VITE_SOME_KEY
 
@@ -34,6 +35,7 @@ export function Main() {
 
   return (
       <main className='flex flex-col justify-center-safe items-center flex-1 p-6'>
+        <Books/>
         <div
             className="
               max-w-xl
@@ -56,7 +58,6 @@ export function Main() {
         </div>
         <Button onClick={fetchQuote} className="mt-4">New Quote</Button>
       </main>
-
   );
 }
 
