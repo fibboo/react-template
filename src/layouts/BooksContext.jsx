@@ -4,7 +4,7 @@ import {Books} from "../components/Books.jsx";
 
 const SOME_KEY = import.meta.env.VITE_SOME_KEY
 
-export function Main() {
+export default function BooksContext() {
   const [quote, setQuote] = useState('');
   const [author, setAuthor] = useState('');
   const [loading, setLoading] = useState(true);
@@ -35,6 +35,7 @@ export function Main() {
 
   return (
       <main className='flex flex-col justify-center-safe items-center flex-1 p-6'>
+        <h1 className='text-3xl'>Books Context</h1>
         <Books/>
         <div
             className="

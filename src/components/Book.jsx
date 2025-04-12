@@ -1,5 +1,5 @@
 import {useContext} from "react";
-import {CustomContext} from "../hooks/Context.jsx";
+import CustomContext from "../contexts/CustomContext.js";
 
 export function Book(props) {
   const {removeBook} = useContext(CustomContext)

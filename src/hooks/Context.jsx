@@ -1,7 +1,5 @@
-import {createContext, useState} from "react";
-
-export const CustomContext = createContext(undefined);
-
+import {useState} from "react";
+import CustomContext from "../contexts/CustomContext.js";
 
 const Context = (props) => {
   const [books, setBooks] = useState([
